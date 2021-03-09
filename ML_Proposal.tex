@@ -11,7 +11,84 @@
 \begin{document}
 \maketitle
 
-\section{title}
+\section{Introduction}
+Software plays a more and more important role in our real life, a small problem in a software may cause a huge loss,like one of the biggest American market makers for stocks Knight struggled to stay afloat after a software bug triggered a \$440 million loss in just 30 minutes. The primary objective of software quality assurance activities is to reduce the number of defects in software products. Software defect prediction has been an active research area. \\
+The defect is found earlier, the cost is less, also now it is a challenging problem considering the limitation of budget and time allocation for such activities~\cite{wan2018perceptions}. Just-in-time software defect prediction(JIT-SDP) extracts features from code changes(eg.codes from a git commit), feed these features to a model then to predict if new code changes are buggy or clean. JIT-SDP predict defects during the code change state, when the knowledge is still fresh to the developers, which help to save the debug time.
+
+\section{Each team member’s role and contribution}
+Our team wants to do experiments and compare to Kamei's paper's result~\cite{kamei2012large}.\\
+\begin{itemize}
+	\item Dataset exploration: Yifei 
+	\item Class balance: Ali
+	\item Feature pre-preprocessing: Yunhua
+	\item Mode build, logistic regression: Ali
+	\item Model build, random forest tree: Yifei
+	\item Model build, Bayern Network: Yunhua
+	\item Evaluation: all of the team will report F1, accuracy auc, recall and precission
+	\item Mode comparison: all of the team
+	\item Report: All of us need to write their parts report.
+\end{itemize}
+\section{Enumerate the CSCI 740 related topics (questions and solution approaches) each individual will contribute
+	to the project}
+\begin{itemize}
+	\item Dataset exploration: Yifei\\
+	Will plot figures to show the data sets, also calculate the mean, max, min and check if there is na or empty values, and how the correlation of the data set features.
+	\item Class balance: Ali  \\
+	Try different methods, oversampling(SMOTE) and undersampling methods.
+	\item Feature pre-preprocessing: Yunhua  \\
+	Check the relationships among features, remove some correlated features, rank them and select features
+	\item Mode build, tune parameters and visualization, logistic regression: Ali
+	\item Model build, tune parameters and visualization, random forest tree: Yifei
+	\item Model build, tune parameters and visualization, Bayern Network: Yunhua
+	\item Evaluation: all of us will report G-mean, F1, accuracy auc, recall and precission \\
+	Will print the results, also plot ROC curve and confusion matrics
+	\item Mode comparison: together \\
+	Compare our result with Kamei's result~\cite{kamei2012large}, if our results does not win, may try ensemble learning.
+	\item Report: All of us need to write their parts report.
+\end{itemize}
+
+\section{Describe the dataset}
+There are totally 6 data sets: bugzilla, columba, jdt, mozilla, platform, postgres; Each of them has 17 features: like lines of modified and so on.
+\begin{center}
+	\begin{tabular}{ c c c }
+		data set & row number & column number \\ 
+		\hline
+		bugzilla & 4620 & 17 \\ 
+		columba & 4455 & 17 \\  
+		jdt & 35386 & 17     \\
+		mozilla & 98275 & 17 \\ 
+		platform & 64250 & 17 \\  
+		postgres & 20431 & 17  \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\section{Provide a timeline for the project}
+\begin{center}
+	\begin{tabular}{ c c  }
+		week & work \\ 
+		\hline
+		week 1 & data exploration, class balance, pre-processing \\ 
+		week 2 & model build and tune \\  
+		week 3 & evaluation and model comparison \\
+		week 4 & team members result sharing and discussion   \\
+		week 5 & write report  \\ 
+		week 6 & modify report and presentation preparation  \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\section{Describe what you plan to demo on the final exam date and other deliverables}
+\begin{itemize}
+	\item our data visualization 
+	\item our data pre-processing results(store to a file and visualize)
+	\item model tuned parameters
+	\item evaluation results: F1, accuracy, auc, G-mean
+	\item Comparison result with Kamei's paper~\cite{kamei2012large}
+\end{itemize}
+
+\section{Describe your plan to evaluate the project.}
+We will use the methods studied from this class to these popular dataset in JIT-SDP, then compare to the well-known papers' results, maybe we can make an improvement and find some new angle in this erea.
 
 
 
@@ -27,42 +104,10 @@
 
 
 
+\medskip
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\bibliographystyle{unsrt}
+\bibliography{ref}
 
 
 
