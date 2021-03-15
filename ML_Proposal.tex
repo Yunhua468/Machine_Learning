@@ -16,14 +16,14 @@ Software plays a more and more important role in our real life, a small problem 
 The defect is found earlier, the cost is less, also now it is a challenging problem considering the limitation of budget and time allocation for such activities~\cite{wan2018perceptions}. Just-in-time software defect prediction(JIT-SDP) extracts features from code changes(eg.codes from a git commit), feed these features to a model then to predict if new code changes are buggy or clean. JIT-SDP predict defects during the code change state, when the knowledge is still fresh to the developers, which help to save the debug time.
 
 \section{Each team member’s role and contribution}
-Our team wants to do experiments and compare to Kamei's paper's result~\cite{kamei2012large}.\\
+Our team wants to do experiments and compare to Hoang's paper's result~\cite{hoang2019deepjit}, we will try some simple models and dnn.\\
 \begin{itemize}
 	\item Dataset exploration: Yifei 
 	\item Class balance: Ali
 	\item Feature pre-preprocessing: Yunhua
-	\item Mode build, logistic regression: Ali
-	\item Model build, random forest tree: Yifei
-	\item Model build, Bayern Network: Yunhua
+	\item Mode build, logistic regression puls dnn: Ali
+	\item Model build, random forest tree puls dnn: Yifei
+	\item Model build, Bayern Network puls dnn: Yunhua
 	\item Evaluation: all of the team will report F1, accuracy auc, recall and precission
 	\item Mode comparison: all of the team
 	\item Report: All of us need to write their parts report.
@@ -37,28 +37,24 @@ Our team wants to do experiments and compare to Kamei's paper's result~\cite{kam
 	Try different methods, oversampling(SMOTE) and undersampling methods.
 	\item Feature pre-preprocessing: Yunhua  \\
 	Check the relationships among features, remove some correlated features, rank them and select features
-	\item Mode build, tune parameters and visualization, logistic regression: Ali
-	\item Model build, tune parameters and visualization, random forest tree: Yifei
-	\item Model build, tune parameters and visualization, Bayern Network: Yunhua
+	\item Mode build, tune parameters and visualization, logistic regression puls dnn: Ali
+	\item Model build, tune parameters and visualization, random forest tree puls dnn: Yifei
+	\item Model build, tune parameters and visualization, Bayern Network puls dnn: Yunhua
 	\item Evaluation: all of us will report G-mean, F1, accuracy auc, recall and precission \\
 	Will print the results, also plot ROC curve and confusion matrics
 	\item Mode comparison: together \\
-	Compare our result with Kamei's result~\cite{kamei2012large}, if our results does not win, may try ensemble learning.
+	Compare our result with Hoang's result~\cite{hoang2019deepjit}, if our results does not win, may try ensemble learning.
 	\item Report: All of us need to write their parts report.
 \end{itemize}
 
 \section{Describe the dataset}
-There are totally 6 data sets: bugzilla, columba, jdt, mozilla, platform, postgres; Each of them has 17 features: like lines of modified and so on.
+There are totally 2 data sets: openstack and qt; Each of them has 35 features: like lines of modified and so on.
 \begin{center}
 	\begin{tabular}{ c c c }
 		data set & row number & column number \\ 
 		\hline
-		bugzilla & 4620 & 17 \\ 
-		columba & 4455 & 17 \\  
-		jdt & 35386 & 17     \\
-		mozilla & 98275 & 17 \\ 
-		platform & 64250 & 17 \\  
-		postgres & 20431 & 17  \\
+		qt & 25150 & 35 \\ 
+		openstack & 26854 & 35 \\  
 		\hline
 	\end{tabular}
 \end{center}
@@ -84,7 +80,7 @@ There are totally 6 data sets: bugzilla, columba, jdt, mozilla, platform, postgr
 	\item our data pre-processing results(store to a file and visualize)
 	\item model tuned parameters
 	\item evaluation results: F1, accuracy, auc, G-mean
-	\item Comparison result with Kamei's paper~\cite{kamei2012large}
+	\item Comparison result with Hoang's paper~\cite{hoang2019deepjit}
 \end{itemize}
 
 \section{Describe your plan to evaluate the project.}
