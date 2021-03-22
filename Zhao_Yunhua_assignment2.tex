@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Assignment2}
+\author{Yunhua Zhao}
+\begin{document}
+\maketitle
+\section*{12. Describe whether or not you used feature scaling and why or why not. [3 pts]}
+\textbf{Answer: } I used feature scaling, because if I do not use, the mse is too big, also my code runs faster if I do the scaling.
+
+
+
+\section*{13. Describe whether or not you dropped any feature and why or why not. [3 pts]}
+\textbf{Answer: } I dropped 3 features, they are residual sugar, alcohol and free sulfur dioxide, because they have high Pearsonr's value.
+
+
+
+\section*{14. In the lecture we have studied two types of Linear Regression algorithm: closed-form solution and iterative optimization. Which algorithm is more suitable for the current dataset? Justify your answer.[4 pts]}
+\textbf{Answer: } I think iterative optimization is more suitable, because the dataset is very big, there are around 4000 samples, there are too many calculation if use the closed-form method.
+
+
+\section*{15. Would the batch gradient descent and the stochastic gradient descent algorithm learn similar 	values for the model weights? Justify your answer. Let’s say that you used a large learning rate. Would that make any difference in terms of learning the weights by both algorithms? [5	pts]}
+\textbf{Answer: } I think BGD and SGD will not have similar values, because the SGD everytime uses one sample, it may have some sparse values, but the BGD uses the whole day, it will more stable. \\
+If used a large learning rate, that may give a different, which makes BGD changes bigger to make it have chances to close to SGD, but may cause BGD miss the minimor value.
+
+
+
+
+\section*{16. Consider the learning curve of your model (degree 1). What conclusion can you draw from the learning curve about (a) whether your model is overfitting/underfitting and (b) its generalization error. Justify your answer. [5 pts]}
+\textbf{Answer: } My model looks not overfitting or underfitting, the figure trend does not to grow or drop, although the error is too high.
+
+
+\section*{17. Consider the learning curve of the 3rd degree polynomial data matrix. What conclusion can 	you draw from the learning curve about (a) whether your model is overfitting/underfitting and (b) its generalization error. Justify your answer. [5 pts]}
+\textbf{Answer: } it looks underfitting, becauce the curve is keeping going down, it is not stable curve at the end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
