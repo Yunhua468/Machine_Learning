@@ -13,7 +13,13 @@
 
 \section{Introduction}
 Software plays a more and more important role in our real life, a small problem in a software may cause a huge loss,like one of the biggest American market makers for stocks Knight struggled to stay afloat after a software bug triggered a \$440 million loss in just 30 minutes. The primary objective of software quality assurance activities is to reduce the number of defects in software products. Software defect prediction has been an active research area. \\
-The defect is found earlier, the cost is less, also now it is a challenging problem considering the limitation of budget and time allocation for such activities~\cite{wan2018perceptions}. Just-in-time software defect prediction(JIT-SDP) extracts features from code changes(eg.codes from a git commit), feed these features to a model then to predict if new code changes are buggy or clean. JIT-SDP predict defects during the code change state, when the knowledge is still fresh to the developers, which help to save the debug time.
+The defect is found earlier, the cost is less, also now it is a challenging problem considering the limitation of budget and time allocation for such activities~\cite{wan2018perceptions}. Just-in-time software defect prediction(JIT-SDP) extracts features from code changes(eg.codes from a git commit), feed these features to a model then to predict if new code changes are buggy or clean. JIT-SDP predict defects during the code change state, when the knowledge is still fresh to the developers, which help to save the debug time. Figure 1 is an example of buggy commit in OPENSTACK ~\ref{example}, it includes commit id, commit author, commit date, commit message and commit diffs, which describe a defective code submit. 
+\begin{figure}[H]
+	\includegraphics[width=8cm]{1}
+	\label{fig:example}
+	\centering
+\end{figure}
+
 
 \section{Each team member’s role and contribution}
 Our team wants to do experiments and compare to Hoang's paper's result~\cite{hoang2019deepjit}, we will try some simple models and dnn.\\
@@ -48,7 +54,7 @@ Our team wants to do experiments and compare to Hoang's paper's result~\cite{hoa
 \end{itemize}
 
 \section{Describe the dataset}
-There are totally 2 data sets: openstack and qt; Each of them has 35 features: like lines of modified and so on.
+There are totally 2 data sets: openstack and qt; openstack is for cloud computing and QT is widget toolkit for creating graphical user interfaces. Each of them has 35 features, like lines of modified, developer experience.  
 \begin{center}
 	\begin{tabular}{ c c c }
 		data set & row number & column number \\ 
@@ -64,12 +70,12 @@ There are totally 2 data sets: openstack and qt; Each of them has 35 features: l
 	\begin{tabular}{ c c  }
 		week & work \\ 
 		\hline
-		week 1 & data exploration, class balance, pre-processing \\ 
-		week 2 & model build and tune \\  
-		week 3 & evaluation and model comparison \\
-		week 4 & team members result sharing and discussion   \\
-		week 5 & write report  \\ 
-		week 6 & modify report and presentation preparation  \\
+		04/09/2021-04/16/2021 & data exploration, class balance, pre-processing \\ 
+		04/16/2021-04/23/2021 & model build and tune \\  
+		04/23/2021-04/30/2021 & evaluation and model comparison \\
+		04/30/2021-05/06/2021 & team members result sharing and discussion   \\
+		05/06/2021-05/13/2021 & write report  \\ 
+		05/13/2021-05/20/2021 & modify report and presentation preparation  \\
 		\hline
 	\end{tabular}
 \end{center}
@@ -104,8 +110,6 @@ We will use the methods studied from this class to these popular dataset in JIT-
 
 \bibliographystyle{unsrt}
 \bibliography{ref}
-
-
 
 
 
