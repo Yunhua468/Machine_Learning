@@ -1,6 +1,6 @@
 # Machine_Learning
 
-# Team: Ali_Hua_Gong
+# Team: AHG
 # Members: Ali Mohamed, Yifei Gong, Yunhua Zhao
 
 ## Reference paper: DeepJIT: an end-to-end deep learning framework for just-in-time defect prediction(2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR))    
